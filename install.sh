@@ -1,8 +1,10 @@
 #!/bin/sh
 
+# keeping yadr directory in respect to developers effors 
 if [ ! -d "$HOME/.yadr" ]; then
     echo "Installing YADR for the first time"
-    git clone --depth=1 https://github.com/skwp/dotfiles.git "$HOME/.yadr"
+    # Changed to clonded repo
+    git clone --depth=1 https://github.com/sunnaren/dotfiles.git "$HOME/.yadr"
     cd "$HOME/.yadr"
     [ "$1" = "ask" ] && export ASK="true"
     rake install
